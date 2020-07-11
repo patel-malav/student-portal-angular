@@ -1,5 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { StudentDataService } from '../student-data.service';
+import { switchMapTo, switchMap } from 'rxjs/operators';
+
+/**
+ * @todo This component can be further expanded
+ */
 
 @Component({
   selector: 'app-student-dashboard',
@@ -7,7 +13,10 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./student-dashboard.component.less'],
 })
 export class StudentDashboardComponent implements OnInit {
-  constructor(private route: ActivatedRoute) {}
+  constructor(private route: ActivatedRoute, public data: StudentDataService) {}
 
+  student = this.route.params.pipe(
+    switchMap(({ id }: { id: string }) => this.data.getStudent(id))
+  );
   ngOnInit(): void {}
 }

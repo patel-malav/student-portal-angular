@@ -1,8 +1,10 @@
 <div class="container h-100 p-4">
   <div class="row justify-content-center">
+    <!-- Title  -->
     <div class="col-12">
       <h1>List of Students</h1>
     </div>
+    <!-- Success of Failure Message -->
     <div *ngIf="success" class="alert alert-success col-8" role="alert">
       Deleted Successfully
     </div>
@@ -11,30 +13,32 @@
     </div>
   </div>
 
+  <!-- @TODO - make responsive table -->
+  <!-- Table to Show Students Data -->
   <table
     class="table table-hover my-4"
     *ngIf="data.students$ | async as students; else spinner"
   >
     <thead class="thead-dark">
-      <th scope="col">#</th>
+      <th class="d-none d-md-table-cell" scope="col">#</th>
       <th scope="col">Roll No</th>
       <th scope="col">Name</th>
       <th scope="col">Age</th>
       <th scope="col">Gender</th>
-      <th scope="col">Email</th>
-      <th scope="col">Date</th>
+      <th class="d-none d-md-table-cell" scope="col">Email</th>
+      <th class="d-none d-md-table-cell" scope="col">Date</th>
       <th scope="col">Edit</th>
       <th scope="col">Delete</th>
     </thead>
     <tbody>
       <tr *ngFor="let student of students; let i = index">
-        <th scope="row">{{ i }}</th>
+        <th class="d-none d-md-table-cell" scope="row">{{ i }}</th>
         <td>{{ student.rollNo }}</td>
         <td>{{ student.name }}</td>
         <td>{{ student.age }}</td>
         <td>{{ student.isMale ? "Male" : "Female" }}</td>
-        <td>{{ student.email }}</td>
-        <td>{{ student.date }}</td>
+        <td class="d-none d-md-table-cell">{{ student.email }}</td>
+        <td class="d-none d-md-table-cell">{{ student.date }}</td>
         <td
           class="text-center text-primary hightlight"
           (click)="router.navigate(['student', 'update', student.id])"
@@ -52,6 +56,7 @@
   </table>
 </div>
 
+<!-- Spinner -->
 <ng-template #spinner>
   <div class="d-flex p-5 align-items-center justify-content-center">
     <div

@@ -1,16 +1,20 @@
 <div class="container my-5">
   <div class="row align-items-center justify-content-center">
-    <div class="col-6">
-      <h1>Add a Student</h1>
+    <!-- Title -->
+    <div class="col-8 col-sm-6">
+      <h1 class="d-none d-md-block">Add a Student</h1>
+      <h2 class="d-md-node">Add a Student</h2>
     </div>
-    <a class="btn btn-primary col-2" routerLink="/student">Back</a>
+    <a class="btn btn-primary col-3 col-sm-2" routerLink="/student">Back</a>
   </div>
 </div>
+<!-- Form -->
 <form
   [formGroup]="studentForm"
   class="container needs-validation"
   (ngSubmit)="onSubmit()"
 >
+  <!-- Alert Success or Fail -->
   <div class="row justify-content-center">
     <div class="col-8">
       <div *ngIf="succsess" class="alert alert-success" role="alert">
@@ -21,6 +25,8 @@
       </div>
     </div>
   </div>
+
+  <!-- Name Form Control -->
   <div class="form-row justify-content-center my-2">
     <div class="form-group col-12 col-sm-10 col-md-8">
       <label for="name">Name</label>
@@ -38,6 +44,7 @@
   </div>
 
   <div class="form-row justify-content-center my-2">
+    <!-- Roll No Form Control -->
     <div class="form-group col-12 col-sm-6 col-md-4">
       <label for="rollNo">Roll No</label>
       <input
@@ -55,6 +62,8 @@
         Please enter a proper roll no
       </div>
     </div>
+
+    <!-- Age Form Control -->
     <div class="form-group col-12 col-sm-6 col-md-4">
       <label for="age">Age</label>
       <input
@@ -73,11 +82,13 @@
       </div>
     </div>
   </div>
+
+  <!-- Gender Form Control -->
   <div class="form-row justify-content-center my-2">
-    <div class="col-1">
+    <div class="col-3 col-sm-1">
       Gender :
     </div>
-    <div class="col-7">
+    <div class="col-9 col-sm-7">
       <div class="form-check form-check-inline">
         <input
           class="form-check-input"
@@ -104,6 +115,7 @@
       </div>
     </div>
   </div>
+  <!-- Email Form Control -->
   <div class="form-row justify-content-center my-2">
     <div class="form-group col-12 col-sm-8 col-md-5">
       <label for="email">Email</label>
@@ -120,6 +132,7 @@
         Please enter a appropriate email
       </div>
     </div>
+    <!-- Date Form Control -->
     <div class="form-group col-12 col-sm-4 col-md-3">
       <label for="date">Date</label>
       <input
@@ -136,10 +149,12 @@
       </div>
     </div>
   </div>
+
+  <!-- Submit Button or Update Button -->
   <div class="form-row justify-content-center my-4">
     <button
       *ngIf="!loading"
-      class="btn btn-dark w-25"
+      class="btn btn-dark w-50 w-sm-25"
       type="submit"
       [disabled]="!studentForm.valid"
     >

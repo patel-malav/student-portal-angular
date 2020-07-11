@@ -5,18 +5,22 @@ import { StudentDashboardComponent } from './student-dashboard/student-dashboard
 import { StudentRegisterComponent } from './student-register/student-register.component';
 
 const routes: Routes = [
+  // Default Loaded Route redirect
   {
     path: '',
     component: StudentComponent,
   },
+  // Add a Student
   {
     path: 'regsiter',
     component: StudentRegisterComponent,
   },
+  // Update Form Data
   {
     path: 'update/:id',
     component: StudentRegisterComponent,
   },
+  // Student Dashboard Route By id can be added
   {
     path: ':id',
     component: StudentDashboardComponent,

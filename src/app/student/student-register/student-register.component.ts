@@ -3,7 +3,7 @@ import { FormBuilder, Validators, FormGroup } from '@angular/forms';
 import { ActivatedRoute } from '@angular/router';
 
 import { StudentDataService, Student } from '../student-data.service';
-import { switchMap, take, tap } from 'rxjs/operators';
+import { switchMap, take } from 'rxjs/operators';
 import { of } from 'rxjs';
 
 @Component({
@@ -12,14 +12,18 @@ import { of } from 'rxjs';
   styleUrls: ['./student-register.component.less'],
 })
 export class StudentRegisterComponent implements OnInit {
+  // Form
   studentForm: FormGroup;
 
+  // If ID is passed then the student gotten from ID
   value: Student;
 
+  // Flags
   error = false;
   succsess = false;
   loading = false;
 
+  // Form Controls shoutcut
   // tslint:disable-next-line: typedef
   get f() {
     return this.studentForm.controls;
@@ -30,6 +34,7 @@ export class StudentRegisterComponent implements OnInit {
     route: ActivatedRoute,
     private data: StudentDataService
   ) {
+    // FormBuilder
     this.studentForm = fb.group({
       name: [
         null,
@@ -60,11 +65,13 @@ export class StudentRegisterComponent implements OnInit {
       date: [null, [Validators.required]],
     });
 
+    // Handel if ID parameter is passed to get and show values in form
     route.params
       .pipe(
         take(1),
         switchMap((params) => {
           if (params.id) {
+            console.log('oye oye');
             return data.getStudent(params.id).pipe(take(1));
           } else {
             return of(null);
@@ -74,11 +81,12 @@ export class StudentRegisterComponent implements OnInit {
       .subscribe((value) => {
         if (value) {
           this.value = value;
+          // Convert to required Format
           const formData = { ...value };
           formData.gender = formData.isMale ? 'male' : 'female';
           delete formData.isMale;
           delete formData.id;
-          console.log(formData);
+
           this.studentForm.setValue(formData);
         }
       });
@@ -86,6 +94,7 @@ export class StudentRegisterComponent implements OnInit {
 
   ngOnInit(): void {}
 
+  // Form Submit Logic
   onSubmit(): void {
     this.loading = true;
     if (!this.value) {

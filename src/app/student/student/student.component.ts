@@ -13,8 +13,13 @@ export class StudentComponent implements OnInit {
   constructor(public data: StudentDataService, public router: Router) {}
 
   ngOnInit(): void {
+    // Get all data for table
     this.data.getStudents();
   }
+
+  /*
+   * Delete Any Entry
+   */
   delete(id: string): void {
     console.log(id);
     this.data.deleteStudent(id).subscribe((_) => {

@@ -1,0 +1,164 @@
+[
+  {
+    "id": "82e2a0b4-936d-407a-9f75-1582dee17f79",
+    "rollNo": 12,
+    "name": "ankit",
+    "age": 25,
+    "email": "ankit",
+    "date": "2020-06-18",
+    "isMale": true
+  },
+  {
+    "id": "804da0b3-d414-415c-8de3-2740a78504f8",
+    "rollNo": 13222,
+    "name": "HDSkjh",
+    "age": 12,
+    "email": "afsdfsa",
+    "date": "2020-07-02",
+    "isMale": true
+  },
+  {
+    "id": "07077ed0-6be7-4021-8de7-278f77e92d3b",
+    "rollNo": 55,
+    "name": "ndj",
+    "age": 16,
+    "email": "bdbgg@73",
+    "date": "2020-06-18",
+    "isMale": false
+  },
+  {
+    "id": "9a0dc515-176b-46a3-89b6-2914b7535e1e",
+    "rollNo": 11,
+    "name": "Amit Yadav",
+    "age": 13,
+    "email": "amityadav2578@gmail.com",
+    "date": "2020-06-18",
+    "isMale": true
+  },
+  {
+    "id": "eed4112e-ec43-4c04-b22e-30af8a4447bc",
+    "rollNo": 95,
+    "name": "agiebf",
+    "age": 95,
+    "email": "hfvthd",
+    "date": "2020-06-18",
+    "isMale": false
+  },
+  {
+    "id": "5ef4e91e-fcc0-485b-8eb1-5dc92d4629c5",
+    "rollNo": 25,
+    "name": "vivek",
+    "age": 21,
+    "email": "vk@gmail.com",
+    "date": "2020-06-18",
+    "isMale": true
+  },
+  {
+    "id": "98c4071b-4e5d-4136-be00-6276f5826b72",
+    "rollNo": 8,
+    "name": "Rahul Yadav",
+    "age": 13,
+    "email": "rahulyadav1402@gmail.com",
+    "date": "2020-06-18",
+    "isMale": false
+  },
+  {
+    "id": "348b779a-9aeb-4081-9759-7cf44dd41015",
+    "rollNo": 1,
+    "name": "rahulyadav1402",
+    "age": 1,
+    "email": "pubg lite",
+    "date": "2020-06-21",
+    "isMale": false
+  },
+  {
+    "id": "3a3159d7-b320-4f85-92d7-8e827d4d3356",
+    "rollNo": 1,
+    "name": "loop36 ",
+    "age": 2,
+    "email": "PUBG mobile ( mad minarm)",
+    "date": "2020-06-01",
+    "isMale": false
+  },
+  {
+    "id": "265b4d65-860f-41bb-9f95-8ff6dc72ca2d",
+    "rollNo": 5,
+    "name": "vivek",
+    "age": 23,
+    "email": "vk135@gmail.com",
+    "date": "2020-06-18",
+    "isMale": true
+  },
+  {
+    "id": "929d3545-91b9-4414-8376-9cbc028a4aa2",
+    "rollNo": 877,
+    "name": "t788t",
+    "age": 6,
+    "email": "6",
+    "date": "2020-06-21",
+    "isMale": true
+  },
+  {
+    "id": "bb63dd89-5bd0-4b77-a107-b2bbf49bef68",
+    "rollNo": 85,
+    "name": "bsnd",
+    "age": 95,
+    "email": "hdjf",
+    "date": null,
+    "isMale": false
+  },
+  {
+    "id": "d88e0f00-a3e1-4017-95a5-b5e7fb500543",
+    "rollNo": 555,
+    "name": "vivek",
+    "age": 22,
+    "email": "vk@gmail.com",
+    "date": "2020-06-18",
+    "isMale": true
+  },
+  {
+    "id": "ecf5e1a2-13ec-41ee-87ae-c4970c68f44a",
+    "rollNo": 8,
+    "name": "Rahul Yadav",
+    "age": 13,
+    "email": "rahulyadav1402@gmail.com",
+    "date": "2020-06-18",
+    "isMale": true
+  },
+  {
+    "id": "5def3499-1d51-48bf-afae-c5d6bba184c1",
+    "rollNo": 877,
+    "name": "t788t",
+    "age": 6,
+    "email": "6",
+    "date": "2020-06-21",
+    "isMale": true
+  },
+  {
+    "id": "52067c84-ab51-4df1-9847-df94ae2779dd",
+    "rollNo": 13222,
+    "name": "HDSkjh",
+    "age": 12,
+    "email": "afsdfsa",
+    "date": "2020-07-02",
+    "isMale": true
+  },
+  {
+    "id": "e3a76fb4-b870-4fb8-a282-ebf21d1cc687",
+    "rollNo": 95,
+    "name": "bdif ",
+    "age": 9565,
+    "email": "bdkf",
+    "date": null,
+    "isMale": false
+  },
+  {
+    "id": "bd2c81c0-ddda-44e4-9f24-edbaf6fb403e",
+    "rollNo": 877,
+    "name": "t788t",
+    "age": 6,
+    "email": "6",
+    "date": "2020-06-21",
+    "isMale": true
+  }
+]

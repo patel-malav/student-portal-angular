@@ -1,0 +1,65 @@
+<div class="container h-100 p-4">
+  <div class="row justify-content-center">
+    <div class="col-12">
+      <h1>List of Students</h1>
+    </div>
+    <div *ngIf="success" class="alert alert-success col-8" role="alert">
+      Deleted Successfully
+    </div>
+    <div *ngIf="error" class="alert alert-danger col-8" role="alert">
+      An Error Occoured While Deleting
+    </div>
+  </div>
+
+  <table
+    class="table table-hover my-4"
+    *ngIf="data.students$ | async as students; else spinner"
+  >
+    <thead class="thead-dark">
+      <th scope="col">#</th>
+      <th scope="col">Roll No</th>
+      <th scope="col">Name</th>
+      <th scope="col">Age</th>
+      <th scope="col">Gender</th>
+      <th scope="col">Email</th>
+      <th scope="col">Date</th>
+      <th scope="col">Edit</th>
+      <th scope="col">Delete</th>
+    </thead>
+    <tbody>
+      <tr *ngFor="let student of students; let i = index">
+        <th scope="row">{{ i }}</th>
+        <td>{{ student.rollNo }}</td>
+        <td>{{ student.name }}</td>
+        <td>{{ student.age }}</td>
+        <td>{{ student.isMale ? "Male" : "Female" }}</td>
+        <td>{{ student.email }}</td>
+        <td>{{ student.date }}</td>
+        <td
+          class="text-center text-primary hightlight"
+          (click)="router.navigate(['student', 'update', student.id])"
+        >
+          <i class="fas fa-edit"></i>
+        </td>
+        <td
+          class="text-center text-danger hightlight"
+          (click)="delete(student.id)"
+        >
+          <i class="fas fa-trash-alt"></i>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<ng-template #spinner>
+  <div class="d-flex p-5 align-items-center justify-content-center">
+    <div
+      class="spinner-border my-5"
+      style="width: 8rem; height: 8rem;"
+      role="status"
+    >
+      <span class="sr-only">Loading...</span>
+    </div>
+  </div>
+</ng-template>
